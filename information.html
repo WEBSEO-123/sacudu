@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sacudu D'Hôtel.comm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/Style-đp.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body>
+
+  <header class="site-header js-site-header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html"><img src="img/C.png"
+              width="90px" height="auto"></a></div>
+        <div class="col-6 col-lg-8">
+
+
+          <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- END menu-toggle -->
+
+          <!-- Head -->
+          <div class="site-navbar js-site-navbar">
+            <nav role="navigation">
+              <div class="container">
+                <div class="row full-height align-items-center">
+                  <div class="col-md-6 mx-auto">
+                    <ul class="list-unstyled menu">
+                      <li><a href="index.html">Trang Chủ</a></li>
+                      <li><a href="about.html">Về Chúng Tôi</a></li>
+                      <li><a href="rooms.html">Phòng nghỉ</a></li>
+                      <li><a href="dining.html">Ẩm Thực</a></li>
+                      <li><a href="spa.html">Spa &amp; Wellness Center</a></li>
+                      <li><a href="voucher main page.html">Ưu Đãi</a></li>
+                      <li class="active"><a href="Booking room.html">Đặt Phòng</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END head -->
+
+  <!-- Section -->
+  <section class="site-hero inner-page overlay" style="background-image: url('img/datphong/thongtinxacnhan.jpg')"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row site-hero-inner justify-content-center align-items-center">
+        <div class="col-md-10 text-center" data-aos="fade">
+          <h1 class="heading mb-3">Thông Tin Xác Nhận<br>Đặt Phòng</h1>
+        </div>
+      </div>
+    </div>
+
+    <a class="mouse smoothscroll" href="#next">
+      <div class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </div>
+    </a>
+  </section>
+  <!-- END section -->
+  <!-- Jumbotron -->
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-3" text-align-center>
+          <p><b>Ngày Nhận Phòng:</b> <span id="checkin-value"></span>10/07/2024</p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><b>Ngày Trả Phòng:</b> <span id="checkout-value"></span>12/07/2024</p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><img src="img/datphong/team.png" height="35">: <span id="adults-selected"></span>2</p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><img src="img/datphong/baby.png" height="30">: <span id="child-selected"></span>1</p>
+        </div>
+        <script>
+          // Lấy giá trị từ URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const checkin = urlParams.get('checkin');
+          const checkout = urlParams.get('checkout');
+          const adults = urlParams.get('adults');
+          const child = urlParams.get('child');
+
+          // Hiển thị giá trị trong header
+          document.getElementById('checkin-value').textContent = checkin;
+          document.getElementById('checkout-value').textContent = checkout;
+          document.getElementById('adults-selected').textContent = adults;
+          document.getElementById('child-selected').textContent = child;
+        </script>
+      </div>
+    </div>
+  </div>
+  <!-- END Jumbotron -->
+
+  <!-- Slider -->
+  <section class="section contact-section" id="next">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+          <form action="Chọn phòng.html" method="GET" class="bg-bg-white p-md-5 p-4 mb-5 border">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label class="text-black font-weight-bold" for="name" required>Tên</label>
+                <input type="text" id="inputname" name="inputname" class="form-control ">
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="text-black font-weight-bold" for="phone" required>Số Điện Thoại</label>
+                <input type="text" id="inputphone" name="inputphone" class="form-control ">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label class="text-black font-weight-bold" for="email" required>Email</label>
+                <input type="email" id="inputemail" name="inputemail" class="form-control ">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label class="text-black font-weight-bold" for="typeroom" required>Loại Phòng</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                  <select name="typeroom" id="typeroom" class="form-control"> Chọn Loại Phòng
+                    <option value="Phòng đơn">Phòng Đơn</option>
+                    <option value="Phòng cơ bản">Phòng Cơ Bản</option>
+                    <option value="Villas">Villas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-12 form-group">
+                <label class="text-black font-weight-bold" for="message">Notes</label>
+                <textarea name="message" id="message" class="form-control " cols="30" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <a href="#sectionpay"><input type="#" value="Tiếp tục"
+                    class="btn btn-outline-white-primary py-3 text-white px-5">
+                </a>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="row">
+            <img src="img/datphong/datphong.jpeg" class="img-fluid mb-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="background-color: #eee;" id="sectionpay" class="sectionpay">
+    <div class="container py-5">
+      <div class="card">
+        <div class="card-body">
+          <div class="row d-flex justify-content-center pb-5">
+            <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
+              <div class="py-4 d-flex flex-row" align="center">
+                <h5><span class="far pe-2"></span><b>THANH TOÁN</b> |</h5>
+                <span class="ps-2">Sacudu D'Hôtel</span>
+              </div>
+              <h4 align="center">Chọn phương thức thanh toán</h4>
+              <hr />
+              <div class="pt-2">
+                <p align="center">
+                  Vui lòng chọn các phương thức thanh toán khả dụng của chúng tôi dưới đây. Trong quá trình thanh toán
+                  gặp sự cố vui lòng liên hệ Hotline của Sacudu D'Hôtel để được hỗ trợ.
+                </p>
+                <form class="pb-3">
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
+                        aria-label="..." checked />
+                    </div>
+                    <div class="rounded border d-flex w-100 p-3 align-items-center">
+                      <p class="mb-0">
+                        <i class="fab  fa-lg text-primary pe-2"></i><img src="img/datphong/visamaster.png" height="20">
+                        Visa/MasterCard
+                      </p>
+                      <div class="ms-auto"></div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2" value=""
+                        aria-label="..." checked />
+                    </div>
+                    <div class="rounded border d-flex w-100 p-3 align-items-center">
+                      <p class="mb-0">
+                        <i class="fab  fa-lg text-primary pe-2"></i><img src="img/datphong/momo.png" height="30"> Momo
+                      </p>
+                      <div class="ms-auto"></div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3" value=""
+                        aria-label="..." checked />
+                    </div>
+                    <div class="rounded border d-flex w-100 p-3 align-items-center">
+                      <p class="mb-0">
+                        <i class="fab fa-lg text-primary pe-2"></i><img src="img/datphong/ZaloPay-vuong.png"
+                          height="40"> Zalopay
+                      </p>
+                      <div class="ms-auto"></div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel4" value=""
+                        aria-label="..." checked />
+                    </div>
+                    <div class="rounded border d-flex w-100 p-3 align-items-center">
+                      <p class="mb-0">
+                        <i class="fab  fa-lg text-primary pe-2"></i> <img src="img/datphong/chuyenkhoan.jpg"
+                          height="30"> Chuyển khoản ngân hàng
+                      </p>
+                      <div class="ms-auto"></div>
+                    </div>
+                  </div>
+                </form>
+                <input type="button" value="Tiến hành thanh toán" data-mdb-ripple-init
+                  class="btn btn-outline-white-primary py-3 text-white px-5" />
+              </div>
+            </div>
+
+            <div class="col-md-5 col-xl-4 offset-xl-1">
+              <div class="py-4 d-flex justify-content-end">
+                <h6><a href="Chose room.html">Huỷ thanh toán và quay lại chọn phòng</a></h6>
+              </div>
+              <div class="rounded d-flex flex-column p-2 bg-body-tertiary">
+                <div class="p-2 me-3">
+                  <h4>Chi tiết đặt chỗ</h4>
+                </div>
+                <div class="p-2 d-flex pt-3">
+                  <div class="col-8">Tổng số đêm lưu trú</div>
+                  <div class="ms-auto">3 đêm</div>
+                </div>
+                <div class="p-2 d-flex">
+                  <div class="col-8">Phòng cơ bản (1 Đêm)</div>
+                  <div class="ms-auto">2.699.100</div>
+                </div>
+                <div class="p-2 d-flex">
+                  <div class="col-8">Dịch vụ bổ trợ</div>
+                  <div class="ms-auto right">0</div>
+                </div>
+                <div class="p-2 d-flex">
+                  <div class="col-8">Bữa sáng (Đã bao gồm)</div>
+                  <div class="ms-auto">0</div>
+                </div>
+                <div class="border-top px-2 mx-2"></div>
+
+                <div class="p-2 d-flex">
+                  <div class="col-8">
+                    Tổng số tiền phòng
+                  </div>
+                  <div class="ms-auto">8.097.300</div>
+                </div>
+                <div class="border-top px-2 mx-2"></div>
+                <div class="p-2 d-flex pt-3">
+                  <div class="col-8">VAT (10%)</div>
+                  <div class="ms-auto"><b>899.700</b></div>
+                </div>
+
+                <div class="border-top px-2 mx-2"></div>
+                <div class="p-2 d-flex pt-3">
+                  <div class="col-8"><b>TỔNG CỘNG</b></div>
+                  <div class="ms-auto"><b class="text-success">8.997.000</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer--->
+  <footer class="section footer-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="about.html">Về Sacudu D'Hôtel</a></li>
+            <li><a href="rooms.html">Phòng Nghỉ</a></li>
+            <li><a href="dining.html">Ẩm Thực</a></li>
+            <li><a href="voucher main page.html">Ưu Đãi</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển Dụng</a></li>
+            <li><a href="#">Điều Khoản Điều Kiện</a></li>
+            <li><a href="#">Chính Sách Bảo Mật</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5 pr-md-5 contact-info">
+          <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+          <a href="https://maps.app.goo.gl/BwQppDSN7McregnFA" target="_blank">
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Địa Chỉ:</span> <span>
+                Hamlet, Vũng Tàu - Bình Châu Phước Thuận</span></p>
+          </a>
+          <a href="tel:028678999">
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>SĐT:</span> <span>
+                (028) 678 9999</span></p>
+          </a>
+          <a href="mailto:info@sacudcdhotel.com">
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span>
+                info@sacudcdhotel.com</span></p>
+          </a>
+        </div>
+        <div class="col-md-3 mb-5">
+          <p>Liên Hệ Chúng Tôi</p>
+          <form action="#" class="footer-newsletter">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email...">
+              <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <p class="col-md-6 text-left">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> Sacudu D'Hôtel. All rights reserved
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+
+
+  <script src="js/aos.js"></script>
+
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

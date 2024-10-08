@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sacudu D'Hôtel.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header js-site-header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html"><img src="img/C.png"
+              width="90px" height="auto"></a></div>
+        <div class="col-6 col-lg-8">
+
+
+          <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- END menu-toggle -->
+
+          <!-- Head -->
+          <div class="site-navbar js-site-navbar">
+            <nav role="navigation">
+              <div class="container">
+                <div class="row full-height align-items-center">
+                  <div class="col-md-6 mx-auto">
+                    <ul class="list-unstyled menu">
+                      <li><a href="index.html">Trang Chủ</a></li>
+                      <li><a href="about.html">Về Chúng Tôi</a></li>
+                      <li><a href="rooms.html">Phòng nghỉ</a></li>
+                      <li><a href="dining.html">Ẩm Thực</a></li>
+                      <li><a href="spa.html">Spa &amp; Wellness Center</a></li>
+                      <li><a href="voucher main page.html">Ưu Đãi</a></li>
+                      <li class="active"><a href="Booking room.html">Đặt Phòng</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END head -->
+
+  <!-- Section -->
+  <section class="site-hero inner-page overlay" style="background-image: url(img/datphong/chonphong.jpg)"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row site-hero-inner justify-content-center align-items-center">
+        <div class="col-md-10 text-center" data-aos="fade">
+          <h1 class="heading mb-3">Chọn Phòng Nghỉ</h1>
+        </div>
+      </div>
+    </div>
+
+    <a class="mouse smoothscroll" href="#next">
+      <div class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </div>
+    </a>
+  </section>
+  <!-- END section -->
+  <!-- Jumbotron -->
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-3" text-align-center>
+          <p><b>Ngày Nhận Phòng:</b> <span id="checkin-value"></span></p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><b>Ngày Trả Phòng:</b> <span id="checkout-value"></span></p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><img src="img/datphong/team.png" height="35">: <span id="adults-selected"></span></p>
+        </div>
+        <div class="col-md-3" text-align-center>
+          <p><img src="img/datphong/baby.png" height="30">: <span id="child-selected"></span></p>
+        </div>
+        <script>
+          // Lấy giá trị từ URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const checkin = urlParams.get('checkin');
+          const checkout = urlParams.get('checkout');
+          const adults = urlParams.get('adults');
+          const child = urlParams.get('child');
+
+          // Hiển thị giá trị trong header
+          document.getElementById('checkin-value').textContent = checkin;
+          document.getElementById('checkout-value').textContent = checkout;
+          document.getElementById('adults-selected').textContent = adults;
+          document.getElementById('child-selected').textContent = child;
+        </script>
+      </div>
+    </div>
+  </div>
+  <!-- END Jumbotron -->
+
+  <!-- Chosse Room -->
+  <section class="section bg-light">
+
+    <div class="container">
+
+
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
+        <a href="#" class="image d-block bg-image-2" style="background-image: url('img/datphong/phòng đơn.jpg');"></a>
+        <div class="text">
+          <span class="d-block mb-4"><span class="display-4 text-primary">2.999.000</span> <span
+              class="text-uppercase letter-spacing-2">/ đêm</span> </span>
+          <h2 class="mb-4">Phòng Đơn</h2>
+          <p>Phòng đơn cao cấp tại khách sạn của chúng tôi mang đến trải nghiệm sang trọng với tầm nhìn biển, nội thất
+            tinh tế, giường êm ái và dịch vụ đẳng cấp, đảm bảo kỳ nghỉ hoàn hảo.</p>
+          <p><a href="information.html" class="btn btn-outline-white-primary py-3 text-white px-5">Đặt Phòng</a></p>
+        </div>
+      </div>
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="200">
+        <a href="#" class="image d-block bg-image-2 order-2"
+          style="background-image: url('img/datphong/Alila Kothaifaru Maldives – Hotel Review.jpg');"></a>
+        <div class="text order-1">
+          <span class="d-block mb-4"><span class="display-4 text-primary">5.999.000</span> <span
+              class="text-uppercase letter-spacing-2">/ đêm</span> </span>
+          <h2 class="mb-4">Phòng Cơ Bản</h2>
+          <p>Phòng cơ bản cao cấp mang đến sự kết hợp hoàn hảo giữa tiện nghi hiện đại và không gian thoáng đãng, với
+            tầm nhìn ra biển tuyệt đẹp, nội thất sang trọng và dịch vụ chu đáo.</p>
+          <p><a href="information.html" class="btn btn-outline-white-primary py-3 text-white px-5">Đặt Phòng</a></p>
+        </div>
+      </div>
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
+        <a href="#" class="image d-block bg-image-2" style="background-image: url('img/datphong/villa.jpg');"></a>
+        <div class="text">
+          <span class="d-block mb-4"><span class="display-4 text-primary">15.999.000</span> <span
+              class="text-uppercase letter-spacing-2">/ đêm</span> </span>
+          <h2 class="mb-4">Villas</h2>
+          <p>Villas cao cấp sát biển mang đến sự thư giãn tuyệt đối với hồ bơi riêng, không gian rộng rãi, tầm nhìn biển
+            đẹp mê hồn, và nội thất ấm cúng, tạo nên kỳ nghỉ như mơ.</p>
+          <p><a href="information.html" class="btn btn-outline-white-primary py-3 text-white px-5">Đặt Phòng</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End choose room -->
+
+  <!--Footer--->
+  <footer class="section footer-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="about.html">Về Sacudu D'Hôtel</a></li>
+            <li><a href="rooms.html">Phòng Nghỉ</a></li>
+            <li><a href="dining.html">Ẩm Thực</a></li>
+            <li><a href="voucher main page.html">Ưu Đãi</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển Dụng</a></li>
+            <li><a href="#">Điều Khoản Điều Kiện</a></li>
+            <li><a href="#">Chính Sách Bảo Mật</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5 pr-md-5 contact-info">
+          <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+          <a href="https://maps.app.goo.gl/BwQppDSN7McregnFA" target="_blank">
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Địa Chỉ:</span> <span>
+                Hamlet, Vũng Tàu - Bình Châu Phước Thuận</span></p>
+          </a>
+          <a href="tel:028678999">
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>SĐT:</span> <span>
+                (028) 678 9999</span></p>
+          </a>
+          <a href="mailto:info@sacudcdhotel.com">
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span>
+                info@sacudcdhotel.com</span></p>
+          </a>
+        </div>
+        <div class="col-md-3 mb-5">
+          <p>Liên Hệ Chúng Tôi</p>
+          <form action="#" class="footer-newsletter">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email...">
+              <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <p class="col-md-6 text-left">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          &copy;
+          <script>document.write(new Date().getFullYear());</script> Sacudu D'Hôtel. All rights reserved
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+
+
+  <script src="js/aos.js"></script>
+
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
